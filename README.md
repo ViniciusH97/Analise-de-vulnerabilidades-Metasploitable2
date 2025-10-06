@@ -1,6 +1,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/ViniciusH97/Analise-de-vulnerabilidades-Metasploitable2)
 
-## Qual é o objetivo do repositório
+## Qual é o objetivo do repositório?
 
 Esse repositório tem como objetivo:
 - Demonstrar todo o processo do fluxo de montagem do laboratório para teste de invasão (Pentest) em uma máquina virtual vulnerável chamada de **Metasploitable2**. 
