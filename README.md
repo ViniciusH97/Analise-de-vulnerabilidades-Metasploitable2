@@ -33,6 +33,12 @@ Como usar este repositório
 3. Configure a rede host-only.  
 4. Siga os tutoriais de reconhecimento, exploração e mitigação.
 
+## Conteúdo
+- Reconhecimento de serviços (`nmap`)  
+- Ataques de força bruta (`hydra`)  
+- Password spraying  
+- Validação de acessos  
+
 **Este projeto é apenas para fins educacionais em ambiente controlado.  
 Não utilize essas técnicas aqui descritas em sistemas ou redes sem autorização.  
 O autor não se responsabiliza por usos indevidos.**
