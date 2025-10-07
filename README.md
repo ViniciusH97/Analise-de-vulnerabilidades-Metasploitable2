@@ -43,4 +43,49 @@ Como usar este repositório
 Não utilize essas técnicas aqui descritas em sistemas ou redes sem autorização.  
 O autor não se responsabiliza por usos indevidos.**
 
+## Configuração do Ambiente
+
+### Kali Linux
+
+<img width="1120" height="623" alt="image" src="https://github.com/user-attachments/assets/fc7d3bfb-88c6-4cab-b7e6-191657f0eadb" />
+
+### Metasploitable 2
+
+<img width="1129" height="618" alt="image" src="https://github.com/user-attachments/assets/97cb0135-1e78-40b5-9763-73cbabf1bd4d" />
+
+## Teste de conexão
+
+Para testar a conexão entre as duas máquinas virtuais, vamos utilizar o comando `ping`, para enviar pacotes icmp e testar a conexão dos hosts da rede.
+
+Digite o comando no terminal:
+
+```bash
+ping -c 4 [endereço ip do metasploitable2]
+```
+
+Exemplo: 
+```bash
+ping -c 4 192.168.56.101
+```
+<img width="765" height="498" alt="image" src="https://github.com/user-attachments/assets/67f96c36-473f-474a-b7a7-a214a21da3f8" />
+
+## Reconhecimento das portas com Nmap
+
+Para reconhecimento padrão vamos executar o comando `nmap` [endereço ip do metaspliotable2]. 
+
+Exemplo: 
+
+```bash
+nmap 192.168.56.101
+```
+
+<img width="745" height="538" alt="image" src="https://github.com/user-attachments/assets/e3ed9481-b651-4ea7-a9da-59d186f0f10a" />
+
+Vamos focar nas portas 21, 22, 80, 445 e 139 com o comando:
+
+```bash
+nmap -sV -p 21,22,80,445,139 192.168.56.101
+```
+
+<img width="735" height="295" alt="image" src="https://github.com/user-attachments/assets/61c76e11-4ff3-46df-8fbd-0b6cf5dd75ed" />
 
