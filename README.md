@@ -2,7 +2,7 @@
 
 <img width="668" height="199" alt="image" src="https://github.com/user-attachments/assets/bc40de8a-736a-4599-8811-052e4f697373" />
 
-# Projeto Metasploitable2 Pentest com Kali Linux
+# Projeto Análise de Vulnerabilidades Metasploitable 2 com Kali Linux (Pentest)
 
 ## Qual é o objetivo do repositório?
 
