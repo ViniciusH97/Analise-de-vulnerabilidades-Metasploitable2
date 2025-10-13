@@ -89,3 +89,8 @@ nmap -sV -p 21,22,80,445,139 192.168.56.101
 
 <img width="735" height="295" alt="image" src="https://github.com/user-attachments/assets/61c76e11-4ff3-46df-8fbd-0b6cf5dd75ed" />
 
+## Teste na porta FTP
+
+Pode-se identificar a porta 21 (FTP), onde a mesma é utilizada para tranferência de arquivos. Nesse protocolo é possível realizar o download ou upload de arquivos do computador.
+
+### Identificação da porta utilizando o Nmap
