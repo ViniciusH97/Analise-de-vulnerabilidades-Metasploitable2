@@ -1,5 +1,3 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/ViniciusH97/Analise-de-vulnerabilidades-Metasploitable2)
-
 <img width="668" height="199" alt="image" src="https://github.com/user-attachments/assets/bc40de8a-736a-4599-8811-052e4f697373" />
 
 # Projeto Análise de Vulnerabilidades Metasploitable 2 com Kali Linux (Pentest)
