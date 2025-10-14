@@ -118,6 +118,9 @@ medusa -h 192.168.56.4 -U users.txt -P pass.txt -M ftp -t 6
 ```
 <img width="1062" height="424" alt="Captura de tela 2025-10-14 125415" src="https://github.com/user-attachments/assets/cdc00c71-7c8c-4160-b7a0-be775e03a0a2" />
 
+### Acessando o serviço FTP com as credenciais encontradas
+
+<img width="335" height="199" alt="image" src="https://github.com/user-attachments/assets/f203430c-9f95-4f91-9f22-80e549275e88" />
 
 
 
