@@ -122,7 +122,7 @@ medusa -h 192.168.56.4 -U users.txt -P pass.txt -M ftp -t 6
 
 ## Ataque em formulários em aplicações web (DVWA)
 
-Os ataques de força bruta também podem ser testados em aplicações web que possuem formulários de login. Com isso, um atacante tiver posse de uma lista de usuários e senhas vazadas consegue utiliza-las em ferramentas para estabelecer o acesso com base em tentativas e erros.
+Os ataques de força bruta também podem ser testados em aplicações web que possuem formulários de login. Com isso, um atacante que tiver posse de uma lista de usuários e senhas vazadas consegue utiliza-las em ferramentas para estabelecer o acesso com base em tentativas e erros.
 
 ### Reconhecimento do comportamento do formulário
 
