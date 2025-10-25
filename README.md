@@ -95,7 +95,7 @@ Pode-se identificar a porta 21 (FTP), onde a mesma é utilizada para tranferênc
 
 ### Criação das wordlists
 
-Nesta etapa criamos duas wordlists. Uma lista com os nome de usuários e outra com as possíveis senhas. Segue abaixo os comandos para a criação das listas:
+Nesta etapa criamos duas wordlists. Uma lista com os nomes de usuários e outra com as possíveis senhas. Segue abaixo os comandos para a criação de ambas as listas:
 
 Criação da lista de usuários:
 ```bash
@@ -122,7 +122,7 @@ medusa -h 192.168.56.4 -U users.txt -P pass.txt -M ftp -t 6
 
 ## Ataque em formulários em aplicações web (DVWA)
 
-Os ataques de força bruta também podem ser testados em aplicações web que possuem formulários de login. Com isso, um atacante que possuir uma lista de usuários e lista de senhas vazadas conseguem utilizar ferramentas para estabelecer o acesso com tentativas e erros.
+Os ataques de força bruta também podem ser testados em aplicações web que possuem formulários de login. Com isso, um atacante tiver posse de uma lista de usuários e senhas vazadas consegue utiliza-las em ferramentas para estabelecer o acesso com base em tentativas e erros.
 
 ### Reconhecimento do comportamento do formulário
 
