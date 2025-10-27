@@ -77,7 +77,9 @@ nmap 192.168.56.3
 
 <img width="751" height="542" alt="image" src="https://github.com/user-attachments/assets/ae822b03-81e1-4604-9203-e0acefd3516e" />
 
-Vamos focar nas portas 21, 22, 80, 445 e 139 com o comando:
+---
+
+Vamos focar nas portas 21, 22, 80, 445 e 139 com a flag `-p`, visualizar os serviços que estão rodando e qual é a versão dos mesmos utilizando a flag `-sV`. Segue o comando abaixo:
 
 ```bash
 nmap -sV -p 21,22,80,445,139 192.168.56.4
