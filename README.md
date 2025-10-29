@@ -5,36 +5,34 @@
 
 ## Qual é o objetivo do repositório?
 
-Este repositório documenta **passo a passo** a montagem de um laboratório de Pentest/testes de invasão realizados contra a VM vulnerável **Metasploitable2**, utilizando o **Kali Linux** como máquina atacante.
+Este repositório documenta **passo a passo** os testes de invasão/pentest em um laboratório coa máquina virtual vulnerável **Metasploitable2**, utilizando o **Kali Linux** como máquina atacante.
 
 - Escopo: configuração de duas VMs no VirtualBox em rede host-only, reconhecimento de serviços, ataques de força bruta e password spraying, validação de acessos, e recomendações de mitigação.
 - Resultados esperados: demonstração reprodutível dos passos, comandos, wordlists utilizadas e análise de riscos e correções aplicáveis.
 
 ## Ambiente e Topologia
 - Hypervisor: Oracle VirtualBox.
-- VM Atacante: Kali Linux (última versão estável disponível no laboratório).
+- VM Atacante: Kali Linux
 - VM Alvo: Metasploitable2.
 - Rede: Host-only / Internal Network para isolamento do laboratório.
 - Endereços:
 - Kali: 192.168.56.5;
 - Metasploitable2: 192.168.56.4.
-  
-> Dica: use snapshots antes de cada experimento para permitir rollback rápido.
 
 ## O que é Metasploitable 2?
 
-Metasploitable 2 é uma máquina virtual vulnerável, mantida pela Rapid7, projetada para fins educacionais em segurança ofensiva.  
-**Atenção:** nunca exponha esta VM à internet, use apenas em ambientes isolados.
+Metasploitable 2 é uma máquina virtual vulnerável desenvolvida pela Rapid7 para fins educacionais em segurança ofensiva.  
+**Atenção:** nunca exponha essa VM à internet, use apenas em ambientes isolados.
 
 Como usar este repositório
 1. Instale o VirtualBox.  
 2. Baixe as imagens do [Kali Linux](https://www.kali.org/get-kali/#kali-platforms) e [Metasploitable2](https://www.rapid7.com/products/metasploit/metasploitable/).  
-3. Configure a rede host-only.  
-4. Siga os tutoriais de reconhecimento, exploração e mitigação.
+3. Configure as duas VMs em rede host-only.  
+4. Siga os tutoriais de reconhecimento, exploração.
 
 ## Conteúdo
-- Reconhecimento de serviços (`nmap`)  
-- Ataques de força bruta (`hydra`)  
+- Reconhecimento de serviços
+- Ataques de força bruta 
 - Password spraying  
 - Validação de acessos
 
@@ -246,4 +244,4 @@ medusa -h 192.168.56.4 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50
 ### Teste de login com o usuário msfadmin
 
 <img width="653" height="362" alt="image" src="https://github.com/user-attachments/assets/e5d8e4c7-b7c0-4949-9629-5160fd9c4276" />
-
+Na imagem acima é possível ver a validação do usuário e senha encontrados no serviço SMB. Dessa forma, a conclusão é a possibilidade de encontrar o usuário e senha realizando o reconhecimento, a enumeração e a força bruta. A respeito da mitigação desse serviço seria possível em definir uma senha forte, ou filtrar a porta do serviço pelo firewall caso não houver utilização.
