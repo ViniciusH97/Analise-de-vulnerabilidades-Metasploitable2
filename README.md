@@ -244,4 +244,7 @@ medusa -h 192.168.56.4 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50
 ### Teste de login com o usuário msfadmin
 
 <img width="653" height="362" alt="image" src="https://github.com/user-attachments/assets/e5d8e4c7-b7c0-4949-9629-5160fd9c4276" />
+
+---
+
 Na imagem acima é possível ver a validação do usuário e senha encontrados no serviço SMB. Dessa forma, a conclusão é a possibilidade de encontrar o usuário e senha realizando o reconhecimento, a enumeração e a força bruta. A respeito da mitigação desse serviço seria possível em definir uma senha forte, ou filtrar a porta do serviço pelo firewall caso não houver utilização.
